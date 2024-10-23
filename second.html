@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start for Free - PlanMyPlate</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            height: 100vh;
+            background-color: #e9e9e9;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+        }
+
+        /* Left form section */
+        .form-section {
+            background-color: #8a9362;
+            width: 50%;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .form-section h1 {
+            color: black;
+            font-size: 34px;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+        .form-section h2 {
+    color: white;
+    font-size: 34px;
+    margin-top: 0px;
+}
+
+        .form-section p {
+    color: #00000042;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+        .form-section .form-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .form-section input, .form-section select {
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            position: relative; /* Set position to relative for absolute positioning of labels */
+            -moz-appearance: textfield; /* Hide the number input spinners */
+            appearance: textfield; /* Hide the number input spinners */
+        }
+
+        .form-section input[type="number"] {
+            padding-right: 30px; /* Ensure space for unit label */
+        }
+
+        .unit-label {
+            position: absolute;
+            right: 10px; /* Position from the right */
+            top: 50%; /* Center vertically */
+            transform: translateY(-50%); /* Adjust for centering */
+            color: black; /* Text color for units */
+            pointer-events: none; /* Prevent interaction */
+        }
+
+        .form-section .submit-btn {
+            background-color: #000;
+            color: #fff;
+            padding: 15px;
+            font-size: 16px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-section .back-link {
+            margin-top: 20px;
+            color: #000;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .form-section .back-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Right image section */
+        .image-section {
+            width: 50%;
+            background-size: cover;
+            background-position: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Left Form Section -->
+        <div class="form-section">
+            <p>planmyplate.com</p>
+            <h1>Start for free!</h1>
+            <h2>let’s eat healthy</h2>
+            
+            <form>
+                <div class="form-group">
+                    <input type="text" placeholder="First name" required>
+                    <input type="text" placeholder="Last name" required>
+                </div>
+                <div class="form-group">
+                    <input type="number" placeholder="Age" required min="0">
+                    <div style="position: relative; width: 100%;">
+                        <input type="text" placeholder="Height" required pattern="\d'\d{1,2}\" title="Format: 5'4\" (feet'inches)\">
+                        <span class="unit-label">ft</span>
+                    </div>
+                    <div style="position: relative; width: 100%;">
+                        <input type="number" placeholder="Weight" required min="0">
+                        <span class="unit-label">kg</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <select required>
+                        <option value="" disabled selected>Fitness Goal</option>
+                        <option value="weight_loss">Weight Loss</option>
+                        <option value="weight_gain">Weight Gain</option>
+                        <option value="bulk">Bulk</option>
+                        <option value="cut">Cut</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <div style="position: relative; width: 100%;">
+                        <input type="number" placeholder="Calorie Goal" required min="0">
+                        <span class="unit-label">kcal</span>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+
+            <a href="index.html" class="back-link">&lt; back</a>
+        </div>
+
+        <!-- Right Image Section -->
+        <div class="image-section" style="background-image: url('shrimp.png');">
+            <!-- Background image is added through inline CSS -->
+        </div>
+    </div>
+
+</body>
+</html>
